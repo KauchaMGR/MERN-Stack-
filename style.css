@@ -4,3 +4,7 @@ h1{
     
 
 }
+.hobbies{
+    display: flex;
+    gap: 0.7rem;
+}

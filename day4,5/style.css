@@ -1,4 +1,4 @@
-h1{
+.head1{
     background-color: rgb(159, 230, 230);
     color: rgb(235, 172, 94);
     text-align: center;
@@ -7,7 +7,7 @@ h1{
     
 
 }
-h3{
+.head3{
     text-align: center;
     color: rgb(133, 96, 96);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -27,7 +27,7 @@ body{
     flex-direction: column;
 
 }
-a{
+.anchor{
     text-decoration: none;
     border-radius: 50px;
     color: black;
@@ -36,13 +36,13 @@ a{
     margin: 30px;
     background-color: aquamarine;
 }
-a:hover{
+.anchor:hover{
       color: red;                  /* text color */
   background-color: rgb(66, 87, 190);    /* background */
  border-color: blue;    /*  border color blue       */
 }
 hr{
-    color: black ;
+    color: rgb(220, 8, 22) ;
 }
 
 footer{

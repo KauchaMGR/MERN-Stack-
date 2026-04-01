@@ -1,0 +1,54 @@
+h1{
+    background-color: rgb(159, 230, 230);
+    color: rgb(235, 172, 94);
+    text-align: center;
+    padding: 30px 50px;
+    margin-top: 0;
+    
+
+}
+h3{
+    text-align: center;
+    color: rgb(133, 96, 96);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.card {
+     align-items: center;
+    display: flex;
+    gap: 0.7rem;
+    padding: 0px 0px 0px 500px;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(234, 171, 230);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+a{
+    text-decoration: none;
+    border-radius: 50px;
+    color: black;
+    border: 3px solid rgb(0, 30, 255);
+    padding: 20px;
+    margin: 30px;
+    background-color: aquamarine;
+}
+a:hover{
+      color: red;                  /* text color */
+  background-color: rgb(66, 87, 190);    /* background */
+ border-color: blue;    /*  border color blue       */
+}
+hr{
+    color: black ;
+}
+
+footer{
+    background-color: rgba(88, 62, 201, 0.652);
+    padding:0px 100px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0;
+}

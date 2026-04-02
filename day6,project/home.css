@@ -1,0 +1,92 @@
+.navbar{
+ 
+ background-color:  #FFFFFF;
+;
+ 
+}
+.navcontainer{
+    margin: 10px 20px;
+    gap: 20rem;
+    
+    background-color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.downloadbtba{
+     margin-top: 17px;
+     align-items: center;
+}
+.dwnbtn{
+    text-decoration: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+   
+    padding: 20px;
+    
+    background-color: #082D4A;
+
+}
+.items{
+    text-decoration: none;
+    color: black;
+    padding: 10px 24px;
+}
+.navitem{
+    gap:0.7 rem;
+    margin-top: 17px;
+    align-items: center;
+}
+
+.body{
+    background-image: url("image/homeBG.jpg");
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+     font-family: "Be Vietnam Pro", sans-serif;
+   
+
+}
+.highlight{
+    color:#FF785A;
+    text-decoration: underline;
+
+}
+
+.heading1 {
+    color: #FFFFFF;
+
+}
+.heading2 {
+    color: #FFFFFF;
+
+} 
+.heading3{
+    color: #FFFFFF;
+
+}
+.elements{
+    margin-top: 200px;
+}
+.subheading{
+    color:#FFFFFF;
+}
+.foot{
+    display: flex;
+    justify-content: space-between;
+    background-color:  #082D4A;
+    margin: 0px 100px ;
+    border-radius: 10px;
+    border: solid  10px #082D4A;
+    height: 60px;
+
+
+
+}
+
+.footitem{
+    color: #FFFFFF;
+    background-color:  #082D4A;
+}

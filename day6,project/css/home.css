@@ -1,0 +1,32 @@
+.navbar{
+ display: flex;
+ 
+}
+.navcontainer{
+    margin: 5px 15px;
+    gap: 20rem;
+    width: 500 px;
+}
+
+.dwnbtn{
+    text-decoration: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+   
+    padding: 20px;
+    margin: 30px;
+    background-color: #082D4A;
+
+}
+.items{
+    text-decoration: none;
+    color: black;
+    padding: 10px 24px;
+}
+.navitem{
+    gap:0.7 rem;
+}
+
+.body{
+    background-image: url("hero section 2.jpg");
+}

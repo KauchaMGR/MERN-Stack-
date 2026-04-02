@@ -1,5 +1,45 @@
 
+/* navbar css starts here */
+.navbar{
+ 
+ background-color:  #FFFFFF;
+;
+ 
+}
+.navcontainer{
+    margin: 10px 20px;
+    gap: 20rem;
+    
+    background-color: #FFFFFF;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.downloadbtba{
+     margin-top: 17px;
+     align-items: center;
+}
+.dwnbtn{
+    text-decoration: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+   
+    padding: 20px;
+    
+    background-color: #082D4A;
+
+}
+.items{
+    text-decoration: none;
+    color: black;
+    padding: 10px 24px;
+}
+.navitem{
+    gap:0.7 rem;
+    margin-top: 17px;
+    align-items: center;
+}
 
 .body{
     background-image: url("image/homeBG.jpg");
@@ -33,7 +73,7 @@
     margin-top: 200px;
 }
 .subheading{
-    color:#FFFFFF;
+    color:#B6B8B9;
 }
 .foot{
     display: flex;

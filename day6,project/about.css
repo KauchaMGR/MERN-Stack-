@@ -1,3 +1,4 @@
+/* navbar css starts here */
 .navbar{
  
  background-color:  #FFFFFF;
@@ -38,6 +39,12 @@
     margin-top: 17px;
     align-items: center;
 }
+/* navbar css ends here */
+ .main{
+     font-family: "Be Vietnam Pro", sans-serif;
+
+ }
+/* heading css  */
 
 .head{
     
@@ -48,16 +55,21 @@
 .heading1{
  color:#FF785A;   
 }
+.highl{
+  color:#FF785A;  
+  text-decoration: underline;   
+}
+
+/* heading css ends here */
+
+/* images css starts */
 .images{
     display: flex;
     align-items: center;
     gap: 0.7rem;
     margin: 200px 100px 100px 250px;
 }
-.highl{
-  color:#FF785A;  
-  text-decoration: underline;   
-}
+
 .leftimages .rightimages{
     display: grid;
 }
@@ -68,4 +80,95 @@
     display:flex;
     gap: 0.7rem;
 }
+
+/* images css ends here */
+
+/* our story css starts  */
+.story{
+    text-align: center;
+
+}
+ 
+.high .cnex_highlight {
+     color:#FF785A; 
+     text-decoration: underline;
+     
+
+}
+
+.ourstory_content{
+    display: flex;
+    gap: 0.7rem;
+    margin: 0px 150px;
+}
+
+.right{
+    display: grid;
+}
+
+.one .two .three .four{
+    width: 60px;
+}
+  /* get in touch button */
+.touch{
+    text-decoration: none;
+    color: aliceblue;
+    border-radius: 8px;
+    border: solid 3px #082D4A;
+    background-color:  #082D4A;
+    padding: 15px;
+
+
+}
+
+/* cinex page */
+.why_cnex  {
+    text-align: center;
+    color: #FFFFFF;
+
+}
+.content {
+    margin: 30px 150px;
+}
+.buttom{
+    margin: 30px 150px;
+}
+.top_card{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.first_head{
+    color:#FF785A;
+    text-align: center;
+    
+
+}
+.buttom_head{
+    text-align: center;
+    color: #FFFFFF;
+}
+.high{
+    color:#FF785A;
+    text-decoration: underline;
+
+}
+.smalldesc{
+    color:#B6B8B9;
+    text-align: center;
+}
+.buttom_one {
+    display: flex;
+    justify-content: space-between;
+}
+.buttom_two{
+     display: flex;
+    justify-content: space-between;
+
+}
+.cnex{
+    background-color: #082D4A ;
+}
+
 

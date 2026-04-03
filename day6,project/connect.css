@@ -40,3 +40,74 @@
     align-items: center;
 }
 /* navbar css ends here */
+
+/* heading starts  */
+.heading{
+    color:#FF785A;  
+  text-decoration: underline;
+  text-align: center;
+
+}
+.main_head{
+    text-align: center;
+}
+.highlight{
+    color:#FF785A;  
+  text-decoration: underline;
+}
+.subhead{
+color: #B3B3B3;
+text-align: center;
+}
+/* heading css ends here */
+.form{
+    display:flex;
+    gap: 10rem;
+    margin-left: 630px;
+}
+
+.btn{
+    margin: 30px 0px;
+    background: #082D4A;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 630px;
+
+}
+
+.form_text{
+    margin-left: 630px;
+}
+
+
+/* footer css starts here */
+.top{
+    display: flex;
+    gap:3rem;
+    margin-left: 300px;
+}
+
+
+.social{
+      display: flex;
+     gap: 0.7rem;
+}
+.social_ic{
+    border-radius: 8px;
+}
+.buttom{
+     text-align: center;
+}
+.line{
+    margin: 0px 400px 0px 300px;
+}
+.content{
+    background: #082D4A;
+    padding: 100px;
+    color:#FFFFFF;
+}
+.log{
+    background: #082D4A;
+
+}

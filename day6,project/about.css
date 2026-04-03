@@ -169,6 +169,22 @@
 }
 .cnex{
     background-color: #082D4A ;
+} 
+
+.border{
+    border-radius: 10px;
 }
 
 
+/* testimonial starts here */
+.cust{
+    display: flex;
+    gap: 35rem;
+}
+
+.review_one{
+    background-image: url();
+}
+.review_two{
+    background-image: url();
+}

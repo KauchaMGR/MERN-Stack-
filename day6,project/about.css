@@ -1,190 +1,239 @@
 /* navbar css starts here */
-.navbar{
- 
- background-color:  #FFFFFF;
-;
- 
+.navbar {
+
+    background-color: #FFFFFF;
+    ;
+
 }
-.navcontainer{
+
+.navcontainer {
     margin: 10px 20px;
     gap: 20rem;
-    
+
     background-color: #FFFFFF;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.downloadbtba{
-     margin-top: 17px;
-     align-items: center;
+
+.downloadbtba {
+    margin-top: 17px;
+    align-items: center;
 }
-.dwnbtn{
+
+.dwnbtn {
     text-decoration: none;
     border-radius: 10px;
     color: rgb(255, 255, 255);
-   
+
     padding: 20px;
-    
+
     background-color: #082D4A;
 
 }
-.items{
+
+.items {
     text-decoration: none;
     color: black;
     padding: 10px 24px;
 }
-.navitem{
-    gap:0.7 rem;
+
+.navitem {
+    gap: 0.7 rem;
     margin-top: 17px;
     align-items: center;
 }
-/* navbar css ends here */
- .main{
-     font-family: "Be Vietnam Pro", sans-serif;
 
- }
+/* navbar css ends here */
+.main {
+    font-family: "Be Vietnam Pro", sans-serif;
+
+}
+
 /* heading css  */
 
-.head{
-    
+.head {
+
     text-align: center;
-     font-family: "Be Vietnam Pro", sans-serif;
-     margin-bottom: 50px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    margin-bottom: 50px;
 }
-.heading1{
- color:#FF785A;   
+
+.heading1 {
+    color: #FF785A;
 }
-.highl{
-  color:#FF785A;  
-  text-decoration: underline;   
+
+.highl {
+    color: #FF785A;
+    text-decoration: underline;
 }
 
 /* heading css ends here */
 
 /* images css starts */
-.images{
+.images {
     display: flex;
     align-items: center;
     gap: 0.7rem;
     margin: 200px 100px 100px 250px;
 }
 
-.leftimages .rightimages{
+.leftimages .rightimages {
     display: grid;
 }
-.centerimages{
+
+.centerimages {
     display: grid;
 }
-.up{
-    display:flex;
+
+.up {
+    display: flex;
     gap: 0.7rem;
 }
 
 /* images css ends here */
 
 /* our story css starts  */
-.story{
+.story {
     text-align: center;
 
 }
- 
+
 .high .cnex_highlight {
-     color:#FF785A; 
-     text-decoration: underline;
-     
+    color: #FF785A;
+    text-decoration: underline;
+
 
 }
 
-.ourstory_content{
+.ourstory_content {
     display: flex;
     gap: 0.7rem;
     margin: 0px 150px;
 }
 
-.right{
+.right {
     display: grid;
 }
 
-.one .two .three .four{
+.one .two .three .four {
     width: 60px;
 }
-  /* get in touch button */
-.touch{
+
+/* get in touch button */
+.touch {
     text-decoration: none;
     color: aliceblue;
     border-radius: 8px;
     border: solid 3px #082D4A;
-    background-color:  #082D4A;
+    background-color: #082D4A;
     padding: 15px;
 
 
 }
 
 /* cinex page */
-.why_cnex  {
+.why_cnex {
     text-align: center;
     color: #FFFFFF;
 
 }
+
 .content {
     margin: 30px 150px;
 }
-.buttom{
+
+.buttom {
     margin: 30px 150px;
 }
-.top_card{
+
+.top_card {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
-.first_head{
-    color:#FF785A;
+.first_head {
+    color: #FF785A;
     text-align: center;
-    
+
 
 }
-.buttom_head{
+
+.buttom_head {
     text-align: center;
     color: #FFFFFF;
 }
-.high{
-    color:#FF785A;
+
+.high {
+    color: #FF785A;
     text-decoration: underline;
 
 }
-.smalldesc{
-    color:#B6B8B9;
+
+.smalldesc {
+    color: #B6B8B9;
     text-align: center;
 }
+
 .buttom_one {
     display: flex;
     justify-content: space-between;
 }
-.buttom_two{
-     display: flex;
+
+.buttom_two {
+    display: flex;
     justify-content: space-between;
 
 }
-.cnex{
-    background-color: #082D4A ;
-} 
 
-.border{
+.cnex {
+    background-color: #082D4A;
+}
+
+.border {
     border-radius: 10px;
 }
 
 
 /* testimonial starts here */
-.cust{
+.cust {
     display: flex;
     gap: 35rem;
 }
 
-.review_one{
-    background-image: url();
+.review_one {
+    background-image: url("image/c_l.jpg");
+    background-repeat: no-repeat;
+    width: 496px;
+    height: 351px;
+
+
 }
-.review_two{
-    background-image: url();
+
+.review_two {
+    background-image: url("image/c_r.jpg");
+    background-repeat: no-repeat;
+    width: 496px;
+    height: 351px;
+}
+
+.review {
+    display: flex;
+    gap: 10rem;
+    ;
+}
+
+.r_1 {
+    width: 320px;
+    height: 206.28648376464844px;
+    margin: 80px 0px 80px 250px ;
+
+}
+.testimon_head{
+    margin:200px
+}
+.line{
+    width: 1150px;
 }

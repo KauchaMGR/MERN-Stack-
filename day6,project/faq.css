@@ -73,14 +73,16 @@
     gap: 10 rem;
 }
 .foot{
-    background-image: url("image/footbg.jpg");
+     background-image: (rgba(0,0,0,0.5), rgba(0,0,0,0.5),url("image/footbg.jpg"));
     background-size: cover;
     background-position: center;
     min-height: 100vh;
     color:#FFFFFF;
-    background-color: #FF785A;
+    
     justify-content: center;  /* centers .contents horizontally */
   align-items: center;       /* centers .contents vertically */
+  display: flex;
+  filter: brightness(0.5);
 }
 .foot4{
     display: flex;
@@ -91,8 +93,8 @@
 }
 
 .contents{
-    /* margin: 100px 550px 100px 550px ; */
-    background-color: #FF785A;
+    
+   
     
 }
 .a{

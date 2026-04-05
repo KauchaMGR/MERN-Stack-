@@ -48,6 +48,8 @@
     background-size: cover;
     background-position: center;
      font-family: "Be Vietnam Pro", sans-serif;
+     display: grid;
+
    
 
 }
@@ -79,10 +81,13 @@
     display: flex;
     justify-content: space-between;
     background-color:  #082D4A;
-    margin: 0px 100px ;
     border-radius: 10px;
     border: solid  10px #082D4A;
     height: 60px;
+    
+    margin-top: 250px;
+
+
 
 
 

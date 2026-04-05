@@ -67,13 +67,15 @@
 .content{
     display: flex;
     gap: 32px;
+    padding-left:200px ;
 }
 .left{
     justify-content: space-between;
-    gap: 10 rem;
+    display: grid;
+    gap: 1rem;
 }
 .foot{
-     background-image: (rgba(0,0,0,0.5), rgba(0,0,0,0.5),url("image/footbg.jpg"));
+     background-image:url("image/footbg.jpg");
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -91,12 +93,23 @@
 .foot3{
     color: #86888A;
 }
-
-.contents{
-    
-   
-    
+.foot2 .foot1{
+    text-align: center;
 }
+
 .a{
     border-radius: 10px;
+}
+/* main font cahages */
+  .main{
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+
+  .faq{
+    display: grid;
+    gap: 5rem;
+  }
+  
+.contents{
+    
 }

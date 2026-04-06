@@ -84,7 +84,7 @@
     justify-content: center;  /* centers .contents horizontally */
   align-items: center;       /* centers .contents vertically */
   display: flex;
-  filter: brightness(0.5);
+  
 }
 .foot4{
     display: flex;
@@ -95,6 +95,9 @@
 }
 .foot2 .foot1{
     text-align: center;
+}
+.foot2{
+    padding-left: 120px;
 }
 
 .a{
@@ -111,5 +114,6 @@
   }
   
 .contents{
+
     
 }

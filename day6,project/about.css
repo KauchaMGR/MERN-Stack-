@@ -6,7 +6,7 @@
 
 }
 
-.navcontainer {
+.nav_container {
     margin: 10px 20px;
     gap: 20rem;
 
@@ -17,12 +17,12 @@
     justify-content: space-between;
 }
 
-.downloadbtba {
+.download_btn {
     margin-top: 17px;
     align-items: center;
 }
 
-.dwnbtn {
+.download_btn-link {
     text-decoration: none;
     border-radius: 10px;
     color: rgb(255, 255, 255);
@@ -33,13 +33,13 @@
 
 }
 
-.items {
+.item {
     text-decoration: none;
     color: black;
     padding: 10px 24px;
 }
 
-.navitem {
+.nav_items {
     gap: 0.7 rem;
     margin-top: 17px;
     align-items: center;
@@ -53,7 +53,7 @@
 
 /* heading css  */
 
-.head {
+.headings {
 
     text-align: center;
     font-family: "Be Vietnam Pro", sans-serif;

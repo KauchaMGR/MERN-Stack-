@@ -1,0 +1,57 @@
+/* navabar codes */
+.navbar{
+    display: flex;
+    align-items: center;
+   gap: 70rem;
+   
+}
+
+.navbar_links{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 30px;
+   
+}
+.link_item{
+     text-decoration: none;
+     color: black;
+
+}
+
+/* navabr endss */
+
+
+/* hero sections */
+.hero_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#aacfcf;
+    padding: 100px;
+    margin-bottom: 30px;
+    
+}
+/* hero_section endss */
+
+/* cards css starts heree
+ */
+  .cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 500px;
+    flex: 1 1 280px;
+    
+  }
+  .cards-items{
+    background-color:#c79cb4;
+     padding: 60px;
+     align-self: flex-end;
+  }
+  .card-items-heading{
+    text-align: center;
+  }
+
+
+ /* cards css ends heree */

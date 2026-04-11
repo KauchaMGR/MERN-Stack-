@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .right{
+            display: grid;
+            grid-template-columns: repeat(3,1fr) ;
+            grid-template-rows: repeat(2,auto-fill);
+            grid-template-areas: 
+             "header1 header2 header3"
+             "foot1 foot2"
+            ;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="image_content">
+
+
+
+      <div class="right">
+          <div class="image" style="grid-area: header1;"   ><img src="image/Image (6).jpg" alt="clothe"></div>
+        <div class="image" style="grid-area: foot1;"><img src="image/Image (2).jpg" alt="box"></div>
+
+
+        <div class="image"><img src="image/Image (1).jpg" alt=""></div>
+        <div class="image"><img src="image/Image (8).jpg" alt=""></div>
+      </div>
+
+
+
+
+        <div class="image"  style="grid-area: header2;"   ><img src="image/Image (4).jpg" alt=""></div>
+        <div class="image" style="grid-area: header3;"   ><img src="image/Image (5).jpg" alt=""></div>
+        <div class="image" style="grid-area: foot2;"><img src="image/Image (7).jpg" alt=""></div>
+    </div>
+
+</body>
+
+</html>

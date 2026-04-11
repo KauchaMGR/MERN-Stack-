@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .header {
+grid-column: 1 / 4; /* span all 3 columns */
+
+}
+
+.nav {
+grid-column: 1 / 2;
+grid-row: 2 / 4;
+
+/* span 2 rows tall */
+
+}
+
+.main {
+grid-column: 2 / 4;
+grid-row: 2 / 3;
+
+}
+
+.footer {
+grid-column: 1 / -1; /* full width footer */
+grid-row: 4 / 5;
+
+}
+
+
+/* .container {
+display: grid;
+grid-template-columns: 200px 1fr;
+grid-template-rows: auto 1fr auto;
+grid-template-areas:
+"header header"
+"sidebar main "
+"footer footer";
+gap: 16px;
+min-height: 100vh;
+
+}
+
+header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+main { grid-area: main;
+footer { grid-area: footer; } */
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main">Main</div>
+        <div class="foot">Footer</div>
+    </div>
+    
+</body>
+</html>

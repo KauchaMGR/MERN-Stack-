@@ -1,0 +1,14 @@
+body{
+    background-color: aqua;
+}
+.items{
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 100px;
+    margin: 100px;
+}
+.main{
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+}

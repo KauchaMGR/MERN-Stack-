@@ -10,5 +10,11 @@ body{
 .main{
     display: flex;
     /* flex-direction: row-reverse; */
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+.one{
+    display: flex;
+  
+     /* grow 2 times shrink 3 times and initial size is 200px */
 }

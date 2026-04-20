@@ -1,0 +1,32 @@
+Merging & Resolving Conflicts
+What happens when two branches change the same thing
+
+git add greeting.js
+
+# back out completely
+
+# When two branches edit the same lines - conflict!
+# Git marks the file like this:
+
+<<<<<<< HEAD (current branch - your changes)
+const greeting = "Hello, World!";
+
+const greeting = "Hi there, everyone!";
+>>>>>>> feature/update-greeting (incoming changes)
+
+#-How to resolve
+# 1. Open the conflicted file
+# 2. Delete the <<< , === , >>> markers
+# 3. Keep the code you want (or combine both)
+# 4. Save the file
+# 5. Stage and commit the resolution
+
+# mark as resolved
+git commit -m "Merge: resolve greeting conflict"
+
+#-Abort a merge -
+git merge -- abort
+
+#-VS Code merge tool
+# VS Code shows "Accept Current / Accept Incoming /
+# Accept Both / Compare Changes" - no manual editing!

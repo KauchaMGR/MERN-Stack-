@@ -1,0 +1,33 @@
+Branching
+Work on features in isolation without breaking main
+
+#-Create & switch branches
+git branch feature/navbar # create branch
+git switch feature/navbar # switch to it
+git switch -c feature/login # create AND switch (shortcut)
+git checkout -b'feature/login # old-style equivalent
+
+#-List branches
+git branch
+git branch -a
+git branch -v
+
+#-Merge: bring changes back to main
+git switch main
+git merge feature/navbar
+
+#-Delete branches
+git branch -d feature/navbar # safe delete (merged only)
+git branch -D feature/navbar # force delete
+
+#-Rename a branch
+git branch -m old-name new-name
+
+#-See branch graph
+git log -- oneline -- graph -- all
+
+# local branches
+# all branches (incl. remote)
+# branches with last commit
+
+# merge feature into main

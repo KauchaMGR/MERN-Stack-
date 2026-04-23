@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas: 
+            'head head head head'
+            'menu body body right'
+            'foot foot foot foot';
+
+        }
+        .head{
+            grid-area: head;
+            text-align: center;
+            padding: 30px;
+            margin: 5px;
+            border: 2px solid red;
+            background-color: antiquewhite;
+        }
+        .menu{
+            grid-area: menu;
+             padding: 30px;
+            margin: 5px;
+            border: 2px solid red;
+            background-color: antiquewhite;
+        }
+        .body{
+            grid-area: body;
+             text-align: center;
+              padding: 30px;
+            margin: 5px;
+            border: 2px solid red;
+            background-color: antiquewhite;
+
+        }
+        .right{
+            grid-area: right;
+             padding: 30px;
+            margin: 5px;
+            border: 2px solid red;
+            background-color: antiquewhite;
+        }
+        .foot{
+            grid-area: foot;
+             text-align: center;
+              padding: 30px;
+            margin: 5px;
+            border: 2px solid red;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">Header</div>
+        <div class="menu">Menu</div>
+        <div class="body">Body</div>
+        <div class="right">right</div>
+        <div class="foot">Footer</div>
+    </div>
+    
+</body>
+</html>

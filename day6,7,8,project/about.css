@@ -6,6 +6,12 @@
 
 }
 
+
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
 .nav_container {
     margin: 10px 20px;
     gap: 20rem;
@@ -46,14 +52,14 @@
 }
 
 /* navbar css ends here */
-.main {
+ .main {
     font-family: "Be Vietnam Pro", sans-serif;
 
 }
 
 /* heading css  */
 
-.headings {
+/* .headings {
 
     text-align: center;
     font-family: "Be Vietnam Pro", sans-serif;
@@ -67,34 +73,41 @@
 .highl {
     color: #FF785A;
     text-decoration: underline;
-}
+} */
 
 /* heading css ends here */
 
 /* images css starts */
-.images {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    margin: 200px 100px 100px 250px;
-}
-
-.leftimages .rightimages {
-    display: grid;
-}
-
-.centerimages {
-    display: grid;
-}
-
-.up {
-    display: flex;
-    gap: 0.7rem;
-}
 
 /* images css ends here */
 
 /* our story css starts  */
+/* .image_content{
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+   gap: 2rem;
+   padding-left: 8rem;
+}
+
+.left_images{
+    display: grid;
+    gap: 2rem; 
+    grid-template-areas: auto auto auto;
+}
+
+.first_image  { grid-column: 1; grid-row: 1; }
+.second_image { grid-column: 2; grid-row: 1; }
+.third_image  { grid-column: 3; grid-row: 1; }
+.fourth_image  { grid-column: 1;  grid-row: 2; }
+.fifth_image    { grid-column: 2 / 4; grid-row: 2; }
+
+.right_images{
+    display: grid;
+    gap: 2rem;
+
+}
+
 .story {
     text-align: center;
 
@@ -119,10 +132,10 @@
 
 .one .two .three .four {
     width: 60px;
-}
+} */
 
 /* get in touch button */
-.touch {
+/* .touch {
     text-decoration: none;
     color: aliceblue;
     border-radius: 8px;
@@ -131,10 +144,10 @@
     padding: 15px;
 
 
-}
+} */
 
 /* cinex page */
-.why_cnex {
+/* .why_cnex {
     text-align: center;
     color: #FFFFFF;
 
@@ -194,11 +207,11 @@
 
 .border {
     border-radius: 10px;
-}
+} */
 
 
 /* testimonial starts here */
-.cust {
+/* .cust {
     display: flex;
     gap: 35rem;
 }
@@ -236,4 +249,43 @@
 }
 .line{
     width: 1150px;
+}  */
+
+.headings {
+
+    text-align: center;
+    font-family: "Be Vietnam Pro", sans-serif;
+    margin-bottom: 50px;
+}
+
+.heading1 {
+    color: #FF785A;
+}
+
+.highl {
+    color: #FF785A;
+    text-decoration: underline;
+}
+
+.image_content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 10px;
+    gap: 8px;
+}
+.first_image{
+    grid-column: 1;
+    grid-row: span 8;
+}
+.second_image{
+    grid-column: 2;
+    grid-row: span 6;
+}
+.third_image{
+    grid-column: 1;
+    grid-row:8px;
+}
+.fourth_image{
+    grid-column: 2;
+    grid-row:6px;
 }

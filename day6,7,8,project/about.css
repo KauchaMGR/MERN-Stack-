@@ -271,21 +271,21 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-auto-rows: 10px;
-    gap: 8px;
+    gap: 20rem;
 }
-.first_image{
+.image-clothe{
     grid-column: 1;
-    grid-row: span 8;
+    grid-row: 1/span 8;
 }
-.second_image{
-    grid-column: 2;
-    grid-row: span 6;
-}
-.third_image{
+.image-clothe{
     grid-column: 1;
-    grid-row:8px;
+    grid-row: 9/span 8;
 }
-.fourth_image{
-    grid-column: 2;
-    grid-row:6px;
+.image-lady{
+    grid-column: 1;
+    grid-row: 17/span 8;
+}
+.image-bag{
+    grid-column: 1/span 2;
+    grid-row: 17/span 8;
 }

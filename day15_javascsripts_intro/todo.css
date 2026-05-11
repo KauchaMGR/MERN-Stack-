@@ -1,0 +1,42 @@
+.heading{
+    text-align: center;
+}
+.form_item{
+    align-items: center;
+  padding-left: 60px;
+}
+
+.buttons{
+    display: flex;
+    padding-top:20px ;
+     /* padding-left: 24rem; */
+     gap: 30px;
+     padding-left: 80px;
+}
+
+.todo_app{
+    background-color: antiquewhite;
+    margin: 0 300px;
+    border-radius: 10px;
+    padding: 5px;
+}
+.list_container{
+    
+  list-style: none;
+  padding-left:40px ;
+  
+
+}
+
+.list_item {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; /* Pushes content to opposite ends */
+    padding: 8px;
+    margin-right: 20px;
+    margin-top:10px ;
+    margin-bottom:1p0x ;
+    gap: 10px; /* Adds a fixed gap between all items (checkbox, span, button) */
+    background-color: aliceblue;
+    border-radius: 5px;
+}

@@ -18,10 +18,10 @@ const todoInput = document.querySelector("input");
 // form submition function
 todoForm.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevents page reload
-  
+
    const newTask = {
     text: todoInput.value,
-    completed: false,
+    // completed: false,
     id: Date.now() // Unique ID for finding it later
   };
 

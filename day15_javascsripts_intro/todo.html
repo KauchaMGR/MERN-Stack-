@@ -6,44 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo app(js)</title>
     <script src="todo.js" defer></script>
+    <link rel="stylesheet" href="todo.css">
 </head>
 
 <body>
-
+<div class="todo_app">
+    
     <head>
         <h1 class="heading">My Todo List</h1>
-        <!-- form starts here -->
-        <form action="">
-            <input type="text" placeholder="What needs to be done?">
-            <button type="submit">+ Add Task</button>
-        </form>
-        <!-- form ends here -->
-
-        <!-- buttons of the todo -->
-        <div class="buttons">
-            <div class="all_button" data-test-all-btn>
-                <button>All</button>
-            </div>
-            <div class="active_button"data-test-active-btn>
-                <button>Active</button>
-            </div>
-            <div class="completed_button" data-test-completed-btn >
-                <button>Completed</button>
-            </div>
-
-        </div>
-        <!-- todo buttons ends here -->
-
-        <!-- list container -->
-        <ul class="list_container" data-test-contain>
-
-
-        </ul>
-
-
-
 
     </head>
+    <!-- form starts here -->
+
+    <form action="">
+        <div class="form_item">
+            <input type="text" placeholder="What needs to be done?">
+            <button type="submit">+ Add Task</button>
+        </div>
+    </form>
+    <!-- form ends here -->
+
+    <!-- buttons of the todo -->
+    <div class="buttons">
+        <div class="all_button" data-test-all-btn>
+            <button>All</button>
+        </div>
+        <div class="active_button" data-test-active-btn>
+            <button>Active</button>
+        </div>
+        <div class="completed_button" data-test-completed-btn>
+            <button>Completed</button>
+        </div>
+
+    </div>
+    <!-- todo buttons ends here -->
+
+    <!-- list container -->
+    <ul class="list_container" data-test-contain>
+
+
+    </ul>
+
+
+
+</div>
+
+
 
 
 

@@ -12,6 +12,7 @@ document.querySelector('[data-test-contain]').append(list);
 
 const todoForm = document.querySelector('form');
 const todoInput = document.querySelector('input');
+
 todoForm.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevents page reload
 
@@ -22,5 +23,23 @@ todoForm.addEventListener('submit', function(event) {
     //     saveToStorage(taskValue); // Adds to LocalStorage
     //     todoInput.value = ''; // Clears the input field
     // }
-    console.log('heyy i was ');
+    
+const text =todoInput.value;
+    
+const list=document.createElement('div');
+list.classList.add('list_item');
+list.textContent=text;
+const checkbox =document.createElement('input');
+checkbox.type='checkbox';
+
+const deletebtn=document.createElement('button');
+deletebtn.innerHTML = "&times;";
+
+list.append(checkbox);
+list.append(deletebtn);
+
+
+
+document.querySelector('[data-test-contain]').append(list);
+    
 });

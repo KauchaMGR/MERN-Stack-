@@ -6,12 +6,31 @@
 //     todoInput.value = ''; // Clears the input field
 // }
 
+const todoTask =JSON.parse(localStorage.getItem('myTodos'))||[];
+
+function saveToLocal(){
+    localStorage.setItem('myTodos',JSON.stringify(todoTask));
+}
+
 const todoForm = document.querySelector("form");
 const todoInput = document.querySelector("input");
 
 // form submition function
 todoForm.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevents page reload
+  
+   const newTask = {
+    text: todoInput.value,
+    completed: false,
+    id: Date.now() // Unique ID for finding it later
+  };
+
+  todoTask.push(newTask); // Add to our array
+  saveToLocal();           // Save the array
+
+
+
+
 
   const ul = document.querySelector("[data-test-contain]");
 

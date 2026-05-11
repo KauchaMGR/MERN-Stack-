@@ -12,29 +12,33 @@
 
     <head>
         <h1 class="heading">My Todo List</h1>
+        <!-- form starts here -->
         <form action="">
             <input type="text" placeholder="What needs to be done?">
             <button type="submit">+ Add Task</button>
         </form>
+        <!-- form ends here -->
 
         <!-- buttons of the todo -->
         <div class="buttons">
-            <div class="all_button">
+            <div class="all_button" data-test-all-btn>
                 <button>All</button>
             </div>
-            <div class="active_button"><button>Active</button></div>
-            <div class="completed_button">
+            <div class="active_button"data-test-active-btn>
+                <button>Active</button>
+            </div>
+            <div class="completed_button" data-test-completed-btn >
                 <button>Completed</button>
             </div>
-        
+
         </div>
-         <!-- todo buttons ends here -->
+        <!-- todo buttons ends here -->
 
-         <!-- list container -->
-          <div class="list_container" data-test-contain>
-            <div class="list_item">go to gym</div>
+        <!-- list container -->
+        <ul class="list_container" data-test-contain>
 
-          </div>
+
+        </ul>
 
 
 

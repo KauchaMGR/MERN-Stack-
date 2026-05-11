@@ -43,6 +43,7 @@ todoForm.addEventListener("submit", function (event) {
     } else {
       console.log("didnot checked");
       list.style.textDecoration = "none";
+      list.classList.remove("completed"); 
     }
   });
 
@@ -57,7 +58,7 @@ todoForm.addEventListener("submit", function (event) {
   list.append(deletebtn);
   ul.append(list);
 
-  todoForm / reset();
+  todoForm.reset();
 
   // document.querySelector('[data-test-contain]').append(list);
 });
@@ -66,7 +67,7 @@ todoForm.addEventListener("submit", function (event) {
 
 // the all completed and active buttons functions
 function filterList(filterType) {
-  const lists = document.querySelector(".list_item");
+  const lists = document.querySelectorAll(".list_item");
 
   lists.forEach((element) => {
     const isCompleted = element.classList.contains("completed");

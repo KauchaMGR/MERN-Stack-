@@ -11,7 +11,7 @@ export default function Taskcard({ task, done, priority,onDelete }) {
 
   return (
     <div>
-      <ul>
+      <ul style={{listStyle:'none'}}>
         {tasks.map((task) => (
           <li key={task.id} style={{ marginBottom: '10px' }}>
             {task.text}

@@ -68,9 +68,9 @@ todoForm.addEventListener("submit", function (event) {
     list.remove();
   });
 
-  list.append(checkbox);
-  list.append(taskspan);
-  list.append(deletebtn);
+  list.append(checkbox,taskspan,deletebtn);
+  // list.append(taskspan);
+  // list.append(deletebtn);
   ul.append(list);
 
   todoForm.reset();
@@ -88,11 +88,11 @@ function filterList(filterType) {
     const isCompleted = element.classList.contains("completed");
     switch (filterType) {
       case "all":
-        element.style.display = "flex";
+        // element.style.display = "flex";
         break;
 
       case "completed":
-        element.style.display = isCompleted ? "flex" : "none";
+         element.style.display = isCompleted ? "flex" : "none";
         break;
 
       case "active":

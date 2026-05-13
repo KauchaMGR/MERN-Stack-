@@ -5,7 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import Header from "./components/Header.jsx" 
 import Taskcard from "./components/Taskcard.jsx"  
-import Footer from "./components/Footer.jsx" // 
+import Footer from "./components/Footer.jsx" 
 
 function App() {
   const deletetask= (id)=>{

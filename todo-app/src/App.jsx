@@ -33,7 +33,12 @@ function App() {
   return (
     <>
      {/* <Header title="My Todo List" taskcount={8} ></Header> */}
-      <AddTask></AddTask>
+      <AddTask
+      tasks={tasks}
+                onAddTask={addTask}
+                onToggleTask={toggleTask}
+                onDeleteTask={deleteTask}
+            ></AddTask>
 
 
 

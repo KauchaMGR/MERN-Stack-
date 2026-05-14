@@ -1,36 +1,20 @@
 import React, { useState } from 'react';
 
-function AddTaskForm() {
-    const [tasks, setTask] = useState([]);
+function AddTaskForm({ tasks, onAddTask, onToggleTask, onDeleteTask }) {
     const [inputVlaue, setInputValue] = useState('');
 
-    const addTask = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        if (inputVlaue.trim() !== "") {
-            setTask([...tasks, { id: Date.now(), text: inputVlaue, completed: false }]);
-        }
-        setInputValue('');
-    };
-
-    const toggleTask = (id) => {
-        setTask(
-            tasks.map((task) =>
-                task.id === id ? { ...task, completed: !task.completed } : task
-            )
-        );
-    };
-
-    const deleteTask = (id) => {
-        setTask(tasks.filter(task => task.id !== id));
+        onAddTask(inputVlaue); // Call parent function with the text input
+        setInputValue('');     // Clear local input field
     };
 
     return (
         <div style={styles.container}>
-
             <div style={styles.card}>
                 <h2 style={styles.title}>Todo List</h2>
                 
-                <form onSubmit={addTask} style={styles.form}>
+                <form onSubmit={handleSubmit} style={styles.form}>
                     <input 
                         type="text" 
                         className="task-input"
@@ -44,7 +28,7 @@ function AddTaskForm() {
                     </button>
                 </form>
 
-                <ul style={styles.list}>
+                     <ul style={styles.list}>
                     {tasks.length === 0 ? (
                         <p style={styles.emptyText}>No tasks yet. Add one above!</p>
                     ) : (
@@ -53,7 +37,7 @@ function AddTaskForm() {
                                 <input
                                     type="checkbox"
                                     checked={task.completed}
-                                    onChange={() => toggleTask(task.id)}
+                                    onChange={() => onToggleTask(task.id)} // Trigger parent toggle
                                     style={styles.checkbox}
                                 />
                                 <span
@@ -65,8 +49,8 @@ function AddTaskForm() {
                                 >
                                     {task.text}
                                 </span>
-                                <button 
-                                    onClick={() => deleteTask(task.id)} 
+                         <button 
+                                    onClick={() => onDeleteTask(task.id)} // Trigger parent delete
                                     className="delete-btn"
                                 >
                                     &times;
@@ -79,7 +63,6 @@ function AddTaskForm() {
         </div>
     );
 }
-
 // Clean UI Stylesheet
 const styles = {
     container: {

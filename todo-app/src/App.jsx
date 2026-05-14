@@ -6,25 +6,39 @@ import './App.css'
 import Header from "./components/Header.jsx" 
 import Taskcard from "./components/Taskcard.jsx"  
 import Footer from "./components/Footer.jsx"
-import Input from "./components/Inputfeild.jsx" 
+import AddTask from "./components/AddTaskForm.jsx" 
 
 function App() {
-  const deletetask= (id)=>{
-    console.log('the task is deleted having id',id);
-    alert('task is beibg deleted',id);
+  const [tasks, setTask] = useState([]);
 
-  }
+    const addTask = (text) => {
+        if (text.trim() !== "") {
+            setTask([...tasks, { id: Date.now(), text: text, completed: false }]);
+        }
+    };
+
+    const toggleTask = (id) => {
+        setTask(
+            tasks.map((task) =>
+                task.id === id ? { ...task, completed: !task.completed } : task
+            )
+        );
+    };
+
+    const deleteTask = (id) => {
+        setTask(tasks.filter(task => task.id !== id));
+    };
  
 
   return (
     <>
-     <Header title="My Todo List" taskcount={8} ></Header>
-      <Input></Input>
+     {/* <Header title="My Todo List" taskcount={8} ></Header> */}
+      <AddTask></AddTask>
 
 
 
      {/* <Taskcard task="go to gym" done="pending" priority="high" onDelete={deletetask}  ></Taskcard> */}
-     <Footer taskNumber={5} ></Footer>
+     {/* <Footer taskNumber={5} ></Footer> */}
 
     </>
   )

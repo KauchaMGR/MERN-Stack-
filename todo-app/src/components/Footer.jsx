@@ -3,7 +3,7 @@ import React from 'react'
 function Footer({taskNumber}) {
   return (
     <div>
-      <span>Remaimimg tasks:{taskNumber}</span>
+      {/* <span>Remaimimg tasks:{taskNumber}</span> */}
      
       
     </div>

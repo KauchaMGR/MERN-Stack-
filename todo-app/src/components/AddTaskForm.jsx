@@ -2,12 +2,25 @@ import React, { useState } from 'react';
 
 function AddTaskForm({ tasks, onAddTask, onToggleTask, onDeleteTask }) {
     const [inputVlaue, setInputValue] = useState('');
+    const [filter,setfilter]=useState('all');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         onAddTask(inputVlaue); // Call parent function with the text input
         setInputValue('');     // Clear local input field
     };
+
+    const filteredTasks = tasks.filter((task) => {
+    switch (filter) {
+      case 'active':
+        return !task.completed;
+      case 'completed':
+        return task.completed;
+      case 'all':
+      default:
+        return true;
+    }});
+   
 
     return (
         <div style={styles.container}>
@@ -28,29 +41,34 @@ function AddTaskForm({ tasks, onAddTask, onToggleTask, onDeleteTask }) {
                     </button>
                 </form>
 
-                     <ul style={styles.list}>
+                <button onClick={()=>setfilter('all')}  >All</button>
+                <button onClick={()=>setfilter('active')}>Active</button>
+                <button onClick={()=>setfilter('completed')}>Completed</button>
+
+                    <ul style={styles.list}>
                     {tasks.length === 0 ? (
-                        <p style={styles.emptyText}>No tasks yet. Add one above!</p>
+                        <p style={styles.emptyText}>No tasks yet. Add one above
+                        !</p>
                     ) : (
-                        tasks.map(task => (
+                        filteredTasks.map(task => (
                             <li key={task.id} className="task-item" style={styles.listItem}>
                                 <input
                                     type="checkbox"
                                     checked={task.completed}
-                                    onChange={() => onToggleTask(task.id)} // Trigger parent toggle
+                                    onChange={() => onToggleTask(task.id)} 
                                     style={styles.checkbox}
                                 />
-                                <span
+                                <span  
                                     style={{
                                         ...styles.taskText,
                                         textDecoration: task.completed ? 'line-through' : 'none',
-                                        color: task.completed ? '#a0aec0' : '#2d3748',
+                                        
                                     }}
-                                >
-                                    {task.text}
+                                >   
+                                    { task.length== 0?(<p style={styles.emptyText}>No tasks yet</p>) : task.text};
                                 </span>
                          <button 
-                                    onClick={() => onDeleteTask(task.id)} // Trigger parent delete
+                                    onClick={() => onDeleteTask(task.id)} 
                                     className="delete-btn"
                                 >
                                     &times;

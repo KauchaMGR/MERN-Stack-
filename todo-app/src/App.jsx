@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -9,7 +9,18 @@ import Footer from "./components/Footer.jsx"
 import AddTask from "./components/AddTaskForm.jsx" 
 
 function App() {
-  const [tasks, setTask] = useState([]);
+  const [tasks, setTask] = useState(()=>{
+    const savedTasks=localStorage.getItem('myTasks');
+    return savedTasks? JSON.parse(savedTasks):[];
+  });
+
+  useEffect(
+    ()=>{
+        localStorage.setItem('myTasks',JSON.stringify(tasks));
+        console.log("one item is added");
+
+    },[tasks]
+  );
 
     const addTask = (text) => {
         if (text.trim() !== "") {
@@ -32,9 +43,9 @@ function App() {
 
   return (
     <>
-     {/* <Header title="My Todo List" taskcount={8} ></Header> */}
+     <Header title="My Todo List" taskcount={8} ></Header>
       <AddTask
-      tasks={tasks}
+                tasks={tasks}
                 onAddTask={addTask}
                 onToggleTask={toggleTask}
                 onDeleteTask={deleteTask}

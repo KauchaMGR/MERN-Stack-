@@ -30,6 +30,7 @@ function App() {
        try{
         const response=await fetch('https://typicode.com');
         const data= await response.json();
+        setTask(data);
         localStorage.setItem('myTasks',JSON.stringify(tasks));
         setloading(false);
 

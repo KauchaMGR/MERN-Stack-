@@ -41,9 +41,11 @@ function AddTaskForm({ tasks, onAddTask, onToggleTask, onDeleteTask }) {
                     </button>
                 </form>
 
-                <button onClick={()=>setfilter('all')}  >All</button>
-                <button onClick={()=>setfilter('active')}>Active</button>
-                <button onClick={()=>setfilter('completed')}>Completed</button>
+               <div className="buttons" style={styles.btn_card} >
+                 <button style={styles.button} onClick={()=>setfilter('all')}  >All</button>
+                <button style={styles.button} onClick={()=>setfilter('active')}>Active</button>
+                <button style={styles.button} onClick={()=>setfilter('completed')}>Completed</button>
+               </div>
 
                     <ul style={styles.list}>
                     {tasks.length === 0 ? (
@@ -83,6 +85,15 @@ function AddTaskForm({ tasks, onAddTask, onToggleTask, onDeleteTask }) {
 }
 // Clean UI Stylesheet
 const styles = {
+   btn_card: {
+     display: 'flex',
+    justifyContent: 'space-around', 
+    alignItems: 'center',           
+    width: '100%', 
+
+
+   },
+
     container: {
         display: 'flex',
         justifyContent: 'center',
@@ -139,6 +150,7 @@ const styles = {
         margin: 0,
     },
     listItem: {
+        margin:'20px',
         display: 'flex',
         alignItems: 'center',
         padding: '12px',

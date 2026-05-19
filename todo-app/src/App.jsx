@@ -15,34 +15,34 @@ function App() {
   });
    const [loading,setloading]=useState(false);
 
-  // useEffect(
-  //   ()=>{
-  //       localStorage.setItem('myTasks',JSON.stringify(tasks));
-  //       console.log("one item is added");
-
-
-  //   },[tasks]
-  // );
-
   useEffect(
     ()=>{
-     const fetchTodos= async()=>{
-       try{
-        const response=await fetch('https://typicode.com');
-        const data= await response.json();
-        setTask(data);
         localStorage.setItem('myTasks',JSON.stringify(tasks));
-        setloading(false);
+        console.log("one item is added");
 
-      }
-      catch(error){
-     console.error("Error fetching data:", error);
-        setLoading(false);
-      }
-     }
-     fetchTodos();
-    },[]
+
+    },[tasks]
   );
+
+  // useEffect(
+  //   ()=>{
+  //    const fetchTodos= async()=>{
+  //      try{
+  //       const response=await fetch('https://typicode.com');
+  //       const data= await response.json();
+  //       setTask(data);
+  //       localStorage.setItem('myTasks',JSON.stringify(tasks));
+  //       setloading(false);
+
+  //     }
+  //     catch(error){
+  //    console.error("Error fetching data:", error);
+  //       setLoading(false);
+  //     }
+  //    }
+  //    fetchTodos();
+  //   },[]
+  // );
 
     const addTask = (text) => {
         if (text.trim() !== "") {

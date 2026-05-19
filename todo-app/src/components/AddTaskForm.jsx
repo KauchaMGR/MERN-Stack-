@@ -67,7 +67,7 @@ function AddTaskForm({ tasks, onAddTask, onToggleTask, onDeleteTask }) {
                                         
                                     }}
                                 >   
-                                    { task.length== 0?(<p style={styles.emptyText}>No tasks yet </p>) : task.text};
+                                    { task.length== 0?(<p style={styles.emptyText}>No tasks yet </p>) : task.text}
                                 </span>
                          <button 
                                     onClick={() => onDeleteTask(task.id)} 

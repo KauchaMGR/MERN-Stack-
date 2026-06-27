@@ -47,5 +47,5 @@ function updateClock() {
   document.getElementById('time').textContent = `${hours}:${minutes}:${seconds}`;
 }
 
-updateClock();              // run once immediately so there's no blank delay
+updateClock();              
 setInterval(updateClock, 1000); // then refresh every second

@@ -12,16 +12,35 @@
 <script>
     document.writeln("hello");
 
-    const p = new Promise((resolve,reject)=>{
-        let status=true;
-        if (status){
-            resolve("p success");
-        }
-        else{
-            reject("q reject");
-        }
-    });
-    p.then((value)=>console.log(value).catch(error=>console.log(error)));
+    // const p = new Promise((resolve,reject)=>{
+    //     let status=true;
+    //     if (status){
+    //      setTimeout(()=>{resolve("p success");},5000)
+
+            
+    //     }
+    //     else{
+    //         reject("q reject");
+    //     }
+    // });
+    // p.then((value)=>console.log(value).catch(error=>console.log(error)));
+
+    //promise.all,any,
+    //fetching data u
+
+//  const promise = new Promise((resolve,reject)=>{
+//              const getUsers = fetch("https://jsonplaceholder.typicode.com/users");
+//              resolve(getUsers);
+//          })
+//          console.log(promise);
+//          promise.then((value)=>{console.log(value.json());})
+
+const getUser= async ()=>{
+    const res= await fetch("https://jsonplaceholder.typicode.com/users");
+    const data=await res.json()
+    console.log(data);
+}
+getUser();
     
     
 </script>

@@ -16,15 +16,69 @@
         <h1>Weather App</h1>
     </header>
     <div class="input_form">
-        <div class="input_feild"><input type="text" placeholder="enter the city name" ></div>
-        <div class="search_btn"><button type="button">🔍</button></div>
+        <div class="input_feild"><input id="input-feild" type="text" placeholder="enter the city name" ></div>
+        <div class="search_btn"><button id="submit-btn" type="button">🔍</button></div>
 
     </div>
     <div class="weather_card">
-        
+
     </div>
 </body>
 <script>
     const api="9941c44e11f0efbabe0fa383bad18622"
+    const input=document.getElementById('input-feild');
+    const btn=document.getElementById('submit-btn');
+    const weather_card=document.getElementsByClassName('weather_card');
+
+    btn.addEventListener("click", () => {
+    const cityName = input.value.trim();
+    if (cityName) {
+        console.log("btn was clicked");
+        getWeather(cityName);
+    } else {
+        weather_card.innerHTML = "<p >Please enter a city name.</p>";
+    }
+});
+async function getWeather(city) {
+    // units=metric gives Celsius. Use units=imperial for Fahrenheit.
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q={cityname}&appid={api}`;
+
+    try {
+        const response = await fetch(apiUrl);
+        
+        // Handle city not found or invalid API keys
+        if (!response.ok) {
+            throw new Error("City not found or API error");
+        }
+
+        const data = await response.json();
+        displayWeather(data);
+        
+    } catch (error) {
+        weather_card.innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
+    }
+}
+
+
+// Function to map JSON response properties directly into the UI HTML
+function displayWeather(data) {
+    const { name, main, weather, wind } = data;
+    const temp = main.temp;
+    const humidity = main.humidity;
+    const description = weather[0].description;
+    const iconCode = weather[0].icon;
+    const iconUrl = `https://openweathermap.org{iconCode}@2x.png`;
+
+    weather_card.innerHTML = `
+        <h2>Weather in ${name}</h2>
+        <img src="${iconUrl}" alt="${description}">
+        <p><strong>Temperature:</strong> ${temp}°C</p>
+        <p><strong>Condition:</strong> ${description}</p>
+        <p><strong>Humidity:</strong> ${humidity}%</p>
+        <p><strong>Wind Speed:</strong> ${wind.speed} m/s</p>
+    `;
+}
+
+
 </script>
 </html>

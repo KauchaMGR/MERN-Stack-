@@ -66,25 +66,6 @@
         console.error("Error fetching users:", error);
       }
     }
-
- async function deleteUser(id){
-    try{
-        const response= await fetch(`${url}/${id}`,{
-            method:"DELETE",
-        });
-        if(!response.ok){
-            throw new Error("Failed to delete user");
-        }
-        console.log("User delete with name"+user.name+"and username"+user.username + "and email" + user.email);
-    }
-    catch(err)
-    {
-        console.log(err);
-    }
-    fetchUsers();
- }
-
-
     async function addUser() {
       const name = prompt("Enter name");
       const userName = prompt("Enter username");
@@ -115,6 +96,67 @@
       }
       fetchUsers();
     }
+
+    async function deleteUser(id) {
+      try {
+        const user = await fetch(`${url}/${id}`).then((res) => res.json());
+        console.log(user);
+        const response = await fetch(`${url}/${id}`, {
+          method: "DELETE",
+        });
+        if (!response.ok) {
+          throw new Error("Failed to delete user");
+        }
+        alert(
+          "User deleted with name " +
+            user.name +
+            " and username " +
+            user.username +
+            " and email " +
+            user.email,
+        );
+      } catch (error) {
+        console.error("Error deleting user:", error);
+      }
+      fetchUsers();
+    }
+
+    async function editUser(id) {
+      const user = await fetch(`${url}/${id}`).then((res) => res.json());
+      const name = prompt("Enter new name", user.name);
+      const userName = prompt("Enter new username", user.username);
+      const email = prompt("Enter new email", user.email);
+      const UpdatedUser = {
+        name: name,
+        username: userName,
+        email: email,
+      };
+      try {
+        const response = await fetch(`${url}/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(UpdatedUser),
+        });
+        if (!response.ok) {
+          throw new Error("Failed to update user");
+        }
+        const data = await response.json();
+        alert(
+          "User updated with name " +
+            data.name +
+            " and username " +
+            data.username +
+            " and email " +
+            data.email,
+        );
+      } catch (error) {
+        console.error("Error updating user:", error);
+      }
+      fetchUsers();
+    }
+
     fetchUsers();
   </script>
 </html>

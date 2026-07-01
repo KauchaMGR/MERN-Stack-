@@ -52,6 +52,7 @@ async function getWeather(city) {
         }
 
         const data = await response.json();
+        console.log(data);
         displayWeather(data);
         
     } catch (error) {

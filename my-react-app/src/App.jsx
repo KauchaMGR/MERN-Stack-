@@ -4,6 +4,7 @@ import Footer from './Components/layouts/Footer'
 import Card from './Components/Card'
 import Button from './Components/Button'
 import Component from './Components/Component'
+import Count from './Components/Count'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
       <Button label="Save" onClick={handleClick} color="blue" />
       <Button label="Delete" onClick={deleteClick} color="red" />
       <Component />
+
+      <Count />
       <Footer />
     </div>
   )

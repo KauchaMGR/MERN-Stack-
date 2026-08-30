@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = () => {
+const Card = (props) => {
     return (
         <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md transition duration-300 hover:shadow-lg">
             <img
@@ -11,7 +11,7 @@ const Card = () => {
 
             <div className="space-y-3 p-5">
                 <h2 className="text-xl font-semibold text-slate-800">
-                    Name: <span className="text-indigo-600">John Doe</span>
+                    Name: <span className="text-indigo-600">{props.name}</span>
                 </h2>
                 <p className="text-sm leading-6 text-slate-600">
                     This is a simple card component designed for a clean, modern layout.

@@ -2,22 +2,26 @@ import React from 'react'
 import Header from './Components/layouts/Header'
 import Footer from './Components/layouts/Footer'
 import Card from './Components/Card'
+import Button from './Components/Button'
+import Component from './Components/Component'
 
 function App() {
-  const cards = Array.from({ length: 6 })
+
+  const handleClick = () => {
+    alert('  save Button  was clicked!')
+  }
+  const deleteClick = () => {
+    alert('  delete Button  was clicked!')
+  }
 
   return (
-    <div className="min-h-screen bg-slate-100 text-slate-800">
+    <div className="min-h-screen w-full max-w-6xl mx-auto bg-slate-100 px-4 py-6 text-slate-800">
       <Header />
-
-      <main className="mx-auto max-w-6xl px-4 py-8">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
-          {cards.map((_, index) => (
-            <Card key={index} />
-          ))}
-        </div>
-      </main>
-
+      <Card name="John Doe" />
+      <Card name="Jane Smith" />
+      <Button label="Save" onClick={handleClick} color="blue" />
+      <Button label="Delete" onClick={deleteClick} color="red" />
+      <Component />
       <Footer />
     </div>
   )

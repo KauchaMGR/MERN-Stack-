@@ -5,6 +5,7 @@ import Card from './Components/Card'
 import Button from './Components/Button'
 import Component from './Components/Component'
 import Count from './Components/Count'
+import Form from './Components/Form'
 
 function App() {
   const [bgColor, setBgColor] = useState('white')
@@ -27,12 +28,13 @@ function App() {
       style={{ backgroundColor: bgColor }}
     >
       <Header />
-      <Card name="John Doe" />
+      {/* <Card name="John Doe" />
       <Card name="Jane Smith" />
       <Button label="Save" onClick={handleClick} color="blue" />
       <Button label="Delete" onClick={deleteClick} color="red" />
       <Component />
-      <Count mode={changeBg} color={bgColor} />
+      <Count mode={changeBg} color={bgColor} /> */}
+      <Form />
       <Footer />
     </div>
   )
